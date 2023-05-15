@@ -18,3 +18,4 @@ const decemberDaysList = [29, 30, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14,
 
 // Escreva seu código abaixo.
 
+console.log("Hello World")
