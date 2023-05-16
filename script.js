@@ -70,16 +70,32 @@ holiday.addEventListener("click", holidayBackground);
 
 // Requisito 3
 
-const fridayBtn = document.querySelector('#btn-friday')
-const friday = document.querySelectorAll('.friday')
-const fridaysArray = [4, 11, 18, 25]
+const fridayBtn = document.querySelector("#btn-friday");
+const friday = document.querySelectorAll(".friday");
+const fridaysArray = [4, 11, 18, 25];
 
 const fridayTextChange = () => {
-for (let index = 0; index < friday.length; index +=1){
-  if (friday[index].innerText.length > 2) {
-  friday[index].innerText = fridaysArray[index]} else {friday[index].innerText = 'SEXTOU!'}
-  
-}
-}
+  for (let index = 0; index < friday.length; index += 1) {
+    if (friday[index].innerText.length > 2) {
+      friday[index].innerText = fridaysArray[index];
+    } else {
+      friday[index].innerText = "SEXTOU!";
+    }
+  }
+};
 fridayBtn.addEventListener("click", fridayTextChange);
 
+// Requisito 4
+
+days.addEventListener("mouseover", zoom);
+days.addEventListener("mouseout", zoom);
+
+function zoom(event) {
+  if (event.type == "mouseover") {
+    event.target.style.fontSize = "30px";
+  } else if (event.type == "mouseout") {
+    event.target.style.fontSize = "20px";
+  }
+}
+
+// Requisito 4
