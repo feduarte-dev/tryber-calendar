@@ -51,9 +51,9 @@ for (let index = 0; index < decemberDaysList.length; index += 1) {
   days.appendChild(list);
 }
 
-const holidayClass = document.querySelectorAll(".holiday");
-
 // Requisito 2
+
+const holidayClass = document.querySelectorAll(".holiday");
 
 const holidayBackground = () => {
   for (let index = 0; index < holidayClass.length; index += 1) {
@@ -98,4 +98,26 @@ function zoom(event) {
   }
 }
 
-// Requisito 4
+// Requisito 5 - Recebi ajuda na monitoria summers
+
+const selected = document.querySelectorAll('.task');
+
+for (let index = 0; index < selected.length; index += 1) {
+  selected[index].addEventListener("click", () => {
+    if (selected[index].classList.contains("selected")) {
+      selected[index].classList.remove("selected");
+    } else {
+      selected[index].classList.add("selected");
+    } console.log(selected)
+  });
+}
+
+
+// _-------------------------------____
+// const color = document.querySelector('.selected') && document.querySelector('.selected').style.backgroundColor
+
+for (let index = 0; index < days.length; index += 1) {
+  console.log(days[index]);
+}
+
+// days.addEventListener('click', )
