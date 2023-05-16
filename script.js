@@ -64,9 +64,22 @@ const holidayBackground = () => {
       holidayClass[index].classList.add("holidayBG");
       holidayClass[index].classList.remove("holidayBGreset");
     }
-    console.log(holidayClass[index]);
   }
 };
 holiday.addEventListener("click", holidayBackground);
 
 // Requisito 3
+
+const fridayBtn = document.querySelector('#btn-friday')
+const friday = document.querySelectorAll('.friday')
+const fridaysArray = [4, 11, 18, 25]
+
+const fridayTextChange = () => {
+for (let index = 0; index < friday.length; index +=1){
+  if (friday[index].innerText.length > 2) {
+  friday[index].innerText = fridaysArray[index]} else {friday[index].innerText = 'SEXTOU!'}
+  
+}
+}
+fridayBtn.addEventListener("click", fridayTextChange);
+
