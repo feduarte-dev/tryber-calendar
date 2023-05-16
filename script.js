@@ -98,7 +98,7 @@ function zoom(event) {
   }
 }
 
-// Requisito 5
+// Requisito 5 feito com ajuda do summers
 
 const selected = document.querySelectorAll(".task");
 
@@ -141,7 +141,7 @@ setDayColor();
 //   });
 // }
 
-// Requisito 6
+// Requisito 6 feito com ajuda do gabarito
 const addBtn = document.querySelector("#btn-add");
 const input = document.querySelector("#task-input");
 const taskList = document.querySelector("#task-list");
