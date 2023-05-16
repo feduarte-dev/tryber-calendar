@@ -98,9 +98,9 @@ function zoom(event) {
   }
 }
 
-// Requisito 5 - Recebi ajuda na monitoria summers
+// Requisito 5
 
-const selected = document.querySelectorAll('.task');
+const selected = document.querySelectorAll(".task");
 
 for (let index = 0; index < selected.length; index += 1) {
   selected[index].addEventListener("click", () => {
@@ -108,16 +108,38 @@ for (let index = 0; index < selected.length; index += 1) {
       selected[index].classList.remove("selected");
     } else {
       selected[index].classList.add("selected");
-    } console.log(selected)
+    }
+    console.log(selected);
   });
 }
 
+const setDayColor = () => {
+  days.addEventListener("click", (event) => {
+    const selectedTask = document.querySelector(".selected");
+    if (
+      selectedTask === null ||
+      event.target.style.color === selectedTask.style.backgroundColor
+    ) {
+      event.target.style.color = "rgb(119,119,119)";
+    } else {
+      event.target.style.color = selectedTask.style.backgroundColor;
+    }
+  });
+};
+setDayColor();
+// for (let index = 0; index < days.length; index += 1) {
+//  days[index].addEventListener("click", () => {
+//     console.log(index)
+//     const color =
+//       document.querySelector(".selected").style.backgroundColor;
+//       console.log(days[index])
+//     if (days[index].style.color === "rgb(119, 119, 119)") {
+//       days[index].style.color = color;
+//     } else {
+//       days[index].style.color = "rgb(119, 119, 119)";
+//     }
+//   });
+// }
 
-// _-------------------------------____
-// const color = document.querySelector('.selected') && document.querySelector('.selected').style.backgroundColor
+// Requisito 6
 
-for (let index = 0; index < days.length; index += 1) {
-  console.log(days[index]);
-}
-
-// days.addEventListener('click', )
