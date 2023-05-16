@@ -142,4 +142,26 @@ setDayColor();
 // }
 
 // Requisito 6
+const addBtn = document.querySelector("#btn-add");
+const input = document.querySelector("#task-input");
+const taskList = document.querySelector("#task-list");
 
+addBtn.addEventListener("click", () => {
+  if (input.value.length > 0) {
+    const li = document.createElement("li");
+    li.innerText = input.value;
+    input.value = "";
+    taskList.appendChild(li);
+  } else {
+    alert("erro");
+  }
+});
+
+input.addEventListener("keyup", (event) => {
+  if (event.key === "Enter") {
+    const li = document.createElement("li");
+    li.innerText = input.value;
+    input.value = "";
+    taskList.appendChild(li);
+  }
+});
